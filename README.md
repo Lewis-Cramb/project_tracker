@@ -6,4 +6,6 @@ This will be a java program to track my AE due dates, exam dates and anything el
 
 f0fa17e - First commit, created java project from scratch without vscode to test it runs and everything pushes correctly.
 
-[commit num] - Second commit, added packages and create a class for exams to be added to.
+dac5379 - Second commit, added packages and create a class for exams to be added to.
+
+[commit num] - Third commit, created basic wireframes for the main site and what it will look like.
