@@ -8,4 +8,6 @@ f0fa17e - First commit, created java project from scratch without vscode to test
 
 dac5379 - Second commit, added packages and create a class for exams to be added to.
 
-[commit num] - Third commit, created basic wireframes for the main site and what it will look like.
+9365d15 - Third commit, created basic wireframes for the main site and what it will look like.
+
+[commit num] - Fourth commit, converted the assessment basics to an interface and added the assessed exercise class
