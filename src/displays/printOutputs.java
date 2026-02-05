@@ -4,13 +4,17 @@ import assessment.AssessedExercise ;
 
 public class printOutputs{
     public static void main(String[] args){
-        Exam oose2 = new Exam("OOSE2", 2026, 05, 25, 1.5, "[Link to page]") ;
-        System.out.println(oose2.getName()) ;
-        System.out.println(oose2.getLink()) ;
-        System.out.println(oose2.getDate()) ;
-        System.out.println(oose2.getDuration()) ;
+        Exam ooseExam = new Exam("Final exam", 2026, 05, 25, 1.5, "[Link to page]", "OOSE2") ;
+        System.out.println(ooseExam.getCourse()) ;
+        System.out.println(ooseExam.getName()) ;
+        System.out.println(ooseExam.getLink()) ;
+        System.out.println(ooseExam.getDate()) ;
+        System.out.println(ooseExam.getDuration()) ;
 
-        AssessedExercise twd = new AssessedExercise("Tango with Django: WAD2", 2026, 3, 4, "[Link to git]") ;
+        System.out.println("") ;
+
+        AssessedExercise twd = new AssessedExercise("Tango with Django", 2026, 3, 4, "[Link to git]","WAD2") ;
+        System.out.println(twd.getCourse()) ;
         System.out.println(twd.getName()) ;
         System.out.println(twd.getLink()) ;
         System.out.println(twd.getDate()) ;
