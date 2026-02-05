@@ -4,7 +4,7 @@ import assessment.AssessedExercise ;
 
 public class printOutputs{
     public static void main(String[] args){
-        Exam ooseExam = new Exam("Final exam", 2026, 05, 25, 1.5, "[Link to page]", "OOSE2") ;
+        Exam ooseExam = new Exam(2026, 05, 25, 1.5, "[Link to page]", "OOSE2") ;
         System.out.println(ooseExam.getCourse()) ;
         System.out.println(ooseExam.getName()) ;
         System.out.println(ooseExam.getLink()) ;
