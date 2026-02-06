@@ -20,7 +20,7 @@ public class enterAssessment {
         System.out.println(nA.getName() + " for " + nA.getCourse() +" on " + nA.getDate() +" - revise at " + nA.getLink()) ;
     }
 
-    public static Assessment enterExam(Scanner scans){
+    public static Assessment enterExam(Scanner scans){ //I would use a function for the joined stuff but txt is different
         System.out.println("What course is the exam for?") ;
         String course = scans.nextLine() ;
 
