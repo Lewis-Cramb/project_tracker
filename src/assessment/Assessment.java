@@ -2,10 +2,10 @@ package assessment;
 import java.time.LocalDate ;
 
 public abstract class Assessment {
-    private final String name ;
-    private final LocalDate date ;
-    private final String link ;
-    private final String course ;
+    protected final String name ;
+    protected final LocalDate date ;
+    protected final String link ;
+    protected final String course ;
 
     public Assessment(String title, int year, int month, int date, String url, String course){
         this.name = title ;

@@ -21,10 +21,12 @@ public class PJ_SWING{
 
         JButton examAdd = new JButton("Add an exam") ;
         examAdd.addActionListener(e -> new examAdd()) ;
+        JPanel examButtonPanel = new JPanel() ;
+        examButtonPanel.add(examAdd) ;
 
         
         frame.add(titlePanel, BorderLayout.PAGE_START) ;
-        frame.add(examAdd) ;
+        frame.add(examButtonPanel) ;
         frame.setVisible(true) ;
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

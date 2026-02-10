@@ -27,7 +27,9 @@ e7ae10b - Fifth commit, switched from interface to abstract parent and sub class
 
 3f04c80 - Seventh commit, I started the swing (using geekforgeeks and stack overflow questions), learning the frame and getting the first text box down. I also tided up some files and improved the read me. 
 
-[commit num] - Eighth commit, learning more about swing through trial and error (labels go on panels, panels go on frames). Added an action listener that, when the button is pressed, connects to a different java file which I will later use to make popups to add details to classes.
+2c7d062 - Eighth commit, learning more about swing through trial and error (labels go on panels, panels go on frames). Added an action listener that, when the button is pressed, connects to a different java file which I will later use to make popups to add details to classes.
+
+[commit num] - Nineth commit, added the examAdd page which successfully has popups and creates an exam class at the end of it, need to find a way to store it. Also changed variables in assesment to protected, should be like that anyway.
 
 
 # Support credit/links
