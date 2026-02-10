@@ -10,6 +10,8 @@ This will be a java program to track my AE due dates, exam dates and anything el
 - Between commit 4 and 5 I considered adding a new package, courses, and adding .java class files for each course however this seemed redundant as there is no needed information other than the name - may come back to this as a way to sort by course 
 - Between commit 4 and 5 I decided to work on the basic system first before moving on to the GUI using swing (or other, when time comes will pick)
 
+- Commit number 10 was the first use of AI to code something, I was lost with JFrame and it solved it for me, will be looking at the docs more closely and learning JFrame better.
+
 
 # Commit history
 
@@ -29,7 +31,9 @@ e7ae10b - Fifth commit, switched from interface to abstract parent and sub class
 
 2c7d062 - Eighth commit, learning more about swing through trial and error (labels go on panels, panels go on frames). Added an action listener that, when the button is pressed, connects to a different java file which I will later use to make popups to add details to classes.
 
-[commit num] - Nineth commit, added the examAdd page which successfully has popups and creates an exam class at the end of it, need to find a way to store it. Also changed variables in assesment to protected, should be like that anyway.
+2c7d062 - Nineth commit, added the examAdd page which successfully has popups and creates an exam class at the end of it, need to find a way to store it. Also changed variables in assesment to protected, should be like that anyway.
+
+[commit num] - Tenth commit, added the aeAdd class which activates the same way as the exam. Admittedly used github copilot to fix the JFrame stuff as I was a bit lost, going back over documentation now though.
 
 
 # Support credit/links

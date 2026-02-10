@@ -1,9 +1,14 @@
 package displays;
-import assessment.Exam ;
-import javax.swing.* ;
+import assessment.AssessedExercise;
+import javax.swing.*;
 
-public class examAdd {
-    public examAdd(){
+public class aeAdd {
+
+    public aeAdd(){
+
+        JOptionPane addTitle = new JOptionPane("Title") ;
+        String title = JOptionPane.showInputDialog(addTitle, "What is the title of the assessed exercise?") ;
+
         JOptionPane addCourse = new JOptionPane("Course Code") ;
         String course = JOptionPane.showInputDialog(addCourse,"What is the course code?") ;
         
@@ -12,7 +17,7 @@ public class examAdd {
         int month ;
         int day ;
         while (true){
-            String fullDate = JOptionPane.showInputDialog(addDate,"What date is the exam? DD/MM/YYYY format") ;
+            String fullDate = JOptionPane.showInputDialog(addDate,"What is the due date? DD/MM/YYYY format") ;
             String[] dateComps = fullDate.split("/") ;
             year = Integer.parseInt(dateComps[2]) ;
             month = Integer.parseInt(dateComps[1]) ;
@@ -21,14 +26,11 @@ public class examAdd {
                 break ;
             }
         }
-
-        JOptionPane addDuration = new JOptionPane("Length") ;
-        double dur = Double.parseDouble(JOptionPane.showInputDialog(addDuration,"How long is the exam (in hrs)?")) ;
         
         JOptionPane addURL = new JOptionPane("URL") ;
         String url = JOptionPane.showInputDialog(addURL,"Provide a link to a study page, click OK if none.") ;
 
-        new Exam(year, month, day, dur, url, course) ;
-    
+        new AssessedExercise(title, year, month, day, url, course) ;
     }
+
 }
