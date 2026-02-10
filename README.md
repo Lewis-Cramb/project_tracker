@@ -25,7 +25,9 @@ e7ae10b - Fifth commit, switched from interface to abstract parent and sub class
 
 04bbc7f - Sixth commit, added the scanner to test input (this may be removed when gui is implemented but is here to test for now).
 
-[commit num] - Seventh commit, I started the swing (using geekforgeeks and stack overflow questions), learning the frame and getting the first text box down. I also tided up some files and improved the read me. 
+3f04c80 - Seventh commit, I started the swing (using geekforgeeks and stack overflow questions), learning the frame and getting the first text box down. I also tided up some files and improved the read me. 
+
+[commit num] - Eighth commit, learning more about swing through trial and error (labels go on panels, panels go on frames). Added an action listener that, when the button is pressed, connects to a different java file which I will later use to make popups to add details to classes.
 
 
 # Support credit/links
