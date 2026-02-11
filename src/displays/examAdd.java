@@ -3,7 +3,8 @@ import assessment.Exam ;
 import javax.swing.* ;
 
 public class examAdd {
-    public examAdd(){
+
+    public static Exam add(){
         JOptionPane addCourse = new JOptionPane("Course Code") ;
         String course = JOptionPane.showInputDialog(addCourse,"What is the course code?") ;
         
@@ -28,7 +29,7 @@ public class examAdd {
         JOptionPane addURL = new JOptionPane("URL") ;
         String url = JOptionPane.showInputDialog(addURL,"Provide a link to a study page, click OK if none.") ;
 
-        new Exam(year, month, day, dur, url, course) ;
+        return new Exam(year, month, day, dur, url, course) ;
     
     }
 }

@@ -25,7 +25,7 @@ public class PJ_SWING{
         titlePanel.add(titleInner, BorderLayout.NORTH) ;
 
         JButton examAdd = new JButton("Add an exam") ;
-        examAdd.addActionListener(e -> new examAdd()) ;
+        examAdd.addActionListener(e -> new examBox(frame)) ;
         JPanel examButtonPanel = new JPanel() ;
         examButtonPanel.add(examAdd) ;
 
@@ -38,8 +38,11 @@ public class PJ_SWING{
         buttonRow.add(examButtonPanel) ;
         buttonRow.add(aeButtonPanel) ;
 
-        frame.add(titlePanel, BorderLayout.PAGE_START) ;
-        frame.add(buttonRow, BorderLayout.CENTER) ;
+        JPanel topPanel = new JPanel(new BorderLayout()) ;
+        topPanel.add(titlePanel, BorderLayout.PAGE_START) ;
+        topPanel.add(buttonRow, BorderLayout.CENTER) ;
+
+        frame.add(topPanel, BorderLayout.PAGE_START) ;
         frame.setVisible(true) ;
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

@@ -33,7 +33,9 @@ e7ae10b - Fifth commit, switched from interface to abstract parent and sub class
 
 2c7d062 - Nineth commit, added the examAdd page which successfully has popups and creates an exam class at the end of it, need to find a way to store it. Also changed variables in assesment to protected, should be like that anyway.
 
-[commit num] - Tenth commit, added the aeAdd class which activates the same way as the exam. Admittedly used github copilot to fix the JFrame stuff as I was a bit lost, going back over documentation now though.
+c84349e - Tenth commit, added the aeAdd class which activates the same way as the exam. Admittedly used github copilot to fix the JFrame stuff as I was a bit lost, going back over documentation now though.
+
+[commit num] - Eleventh commit, started to create the implementations of the box wireframe, adding exams to the program when inputted. Also edited the wireframe slightly to fit exams and aes.
 
 
 # Support credit/links
