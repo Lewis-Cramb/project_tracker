@@ -24,13 +24,16 @@ public class PJ_SWING{
         titleInner.add(userName) ;
         titlePanel.add(titleInner, BorderLayout.NORTH) ;
 
+        JPanel boxPanel = new JPanel(new GridLayout(2,3,50,100)) ;
+
+
         JButton examAdd = new JButton("Add an exam") ;
-        examAdd.addActionListener(e -> new examBox(frame)) ;
+        examAdd.addActionListener(e -> new examBox(frame, boxPanel)) ;
         JPanel examButtonPanel = new JPanel() ;
         examButtonPanel.add(examAdd) ;
 
         JButton aeAdd = new JButton("Add an assessed exercise") ;
-        aeAdd.addActionListener(e -> new aeAdd()) ;
+        aeAdd.addActionListener(e -> new aeBox(frame, boxPanel)) ;
         JPanel aeButtonPanel = new JPanel() ;
         aeButtonPanel.add(aeAdd) ;
 

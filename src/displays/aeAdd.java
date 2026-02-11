@@ -4,7 +4,7 @@ import javax.swing.*;
 
 public class aeAdd {
 
-    public aeAdd(){
+    public static AssessedExercise add(){
 
         JOptionPane addTitle = new JOptionPane("Title") ;
         String title = JOptionPane.showInputDialog(addTitle, "What is the title of the assessed exercise?") ;
@@ -30,7 +30,7 @@ public class aeAdd {
         JOptionPane addURL = new JOptionPane("URL") ;
         String url = JOptionPane.showInputDialog(addURL,"Provide a link to a study page, click OK if none.") ;
 
-        new AssessedExercise(title, year, month, day, url, course) ;
+        return new AssessedExercise(title, year, month, day, url, course) ;
     }
 
 }

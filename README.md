@@ -2,14 +2,13 @@
 This will be a java program to track my AE due dates, exam dates and anything else important (like a calender)
 
 # Project Plan
-1) Get exams and assessments able to be inputted into a class system and test them
-2) Create a GUI to view everything in order of what is closest
-3) Store the data somehow (DB?) to enable the program to remember and be able to be opened without needing to re-input all data - use the fileoutputstream??
+1) Get exams and assessments able to be inputted into a class system and test them (Finished on 6th commit)
+2) Create a GUI to view everything in order of what is closest (Finished on 12th commit)
+3) Store the data somehow (DB?) to enable the program to remember and be able to be opened without needing to re-input all data - use the fileoutputstream?? - May use CSV files, need to check over
 
 # Notes
 - Between commit 4 and 5 I considered adding a new package, courses, and adding .java class files for each course however this seemed redundant as there is no needed information other than the name - may come back to this as a way to sort by course 
 - Between commit 4 and 5 I decided to work on the basic system first before moving on to the GUI using swing (or other, when time comes will pick)
-
 - Commit number 10 was the first use of AI to code something, I was lost with JFrame and it solved it for me, will be looking at the docs more closely and learning JFrame better.
 
 
@@ -35,7 +34,9 @@ e7ae10b - Fifth commit, switched from interface to abstract parent and sub class
 
 c84349e - Tenth commit, added the aeAdd class which activates the same way as the exam. Admittedly used github copilot to fix the JFrame stuff as I was a bit lost, going back over documentation now though.
 
-[commit num] - Eleventh commit, started to create the implementations of the box wireframe, adding exams to the program when inputted. Also edited the wireframe slightly to fit exams and aes.
+a66e803 - Eleventh commit, started to create the implementations of the box wireframe, adding exams to the program when inputted. Also edited the wireframe slightly to fit exams and aes.
+
+[commit num] - Twelfth commit, copied examBox stuff over into aeBox so AEs can now be added to the program too - gui is also just lightly touched up as it is finished.
 
 
 # Support credit/links

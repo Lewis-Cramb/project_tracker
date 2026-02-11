@@ -1,39 +1,40 @@
 package displays;
 
-import assessment.Exam ;
+import assessment.AssessedExercise ;
+
 import java.awt.* ;
 import java.time.LocalDate ;
 import javax.swing.* ;
 
-public class examBox {
+public class aeBox {
 
-    public examBox(JFrame frame, JPanel boxPanel){
-        Exam examDetails = examAdd.add() ;
-        JPanel exmBox = new JPanel(new GridBagLayout()) ;
+    public aeBox(JFrame frame, JPanel boxPanel){
+        AssessedExercise aeDetails = aeAdd.add() ;
+        JPanel aeBox = new JPanel(new GridBagLayout()) ;
         GridBagConstraints gbc = new GridBagConstraints() ;
         
-        JLabel date = new JLabel(examDetails.getDate().toString()) ;
+        JLabel date = new JLabel(aeDetails.getDate().toString()) ;
         gbc.gridx = 0 ;
         gbc.gridy = 0 ;
-        exmBox.add(date, gbc) ;
+        aeBox.add(date, gbc) ;
 
-        JLabel nameCourse = new JLabel("Exam: "+examDetails.getCourse()) ;
+        JLabel nameCourse = new JLabel(aeDetails.getName() + ": "+aeDetails.getCourse()) ;
         gbc.gridx = 0 ;
         gbc.gridy = 1 ;
         gbc.gridheight = 1 ;
-        exmBox.add(nameCourse, gbc) ;
+        aeBox.add(nameCourse, gbc) ;
 
-        JLabel link = new JLabel(examDetails.getLink()) ;
+        JLabel link = new JLabel(aeDetails.getLink()) ;
         gbc.gridy = 2 ;
-        exmBox.add(link, gbc) ;
+        aeBox.add(link, gbc) ;
 
-        exmBox.setBorder(BorderFactory.createRaisedBevelBorder()) ;
+        aeBox.setBorder(BorderFactory.createRaisedBevelBorder()) ;
         JPanel circlePanel = new JPanel() {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g) ;
                 Graphics2D g2d = (Graphics2D) g ;
-                int examDay = examDetails.getDate().getDayOfYear() ;
+                int examDay = aeDetails.getDate().getDayOfYear() ;
                 int curDay = LocalDate.now().getDayOfYear() ;
                 int remainingDays = examDay - curDay ;
 
@@ -70,10 +71,11 @@ public class examBox {
         gbc.gridy = 0 ;
         gbc.gridheight = 3 ;
         gbc.anchor = GridBagConstraints.CENTER ;
-        exmBox.add(circlePanel, gbc) ;
+        aeBox.add(circlePanel, gbc) ;
 
-        boxPanel.add(exmBox) ;
+        boxPanel.add(aeBox) ;
         frame.add(boxPanel, BorderLayout.CENTER) ;
         frame.setVisible(true);
     }
 }
+
