@@ -10,6 +10,7 @@ This will be a java program to track my AE due dates, exam dates and anything el
 - Between commit 4 and 5 I considered adding a new package, courses, and adding .java class files for each course however this seemed redundant as there is no needed information other than the name - may come back to this as a way to sort by course 
 - Between commit 4 and 5 I decided to work on the basic system first before moving on to the GUI using swing (or other, when time comes will pick)
 - Commit number 10 was the first use of AI to code something, I was lost with JFrame and it solved it for me, will be looking at the docs more closely and learning JFrame better.
+- Between commit 12 and 13, researching how to do the memory storage and need to note down ideas so that they make sense and I remember them. An idea is to use buffered file reader, adding the created exam or ae to a list that is sorted, written to a file and then added to the page somehow?
 
 
 # Commit history
@@ -36,7 +37,9 @@ c84349e - Tenth commit, added the aeAdd class which activates the same way as th
 
 a66e803 - Eleventh commit, started to create the implementations of the box wireframe, adding exams to the program when inputted. Also edited the wireframe slightly to fit exams and aes.
 
-[commit num] - Twelfth commit, copied examBox stuff over into aeBox so AEs can now be added to the program too - gui is also just lightly touched up as it is finished.
+2399737 - Twelfth commit, copied examBox stuff over into aeBox so AEs can now be added to the program too - gui is also just lightly touched up as it is finished.
+
+[commit number] - Thirtheenth commit, edtied wireframe and gui slightly to fit better for aes, also changed the output so that the aes and exams are added to an arraylist that is sorted and can be added to a txt file.
 
 
 # Support credit/links

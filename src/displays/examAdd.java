@@ -22,14 +22,11 @@ public class examAdd {
                 break ;
             }
         }
-
-        JOptionPane addDuration = new JOptionPane("Length") ;
-        double dur = Double.parseDouble(JOptionPane.showInputDialog(addDuration,"How long is the exam (in hrs)?")) ;
         
         JOptionPane addURL = new JOptionPane("URL") ;
         String url = JOptionPane.showInputDialog(addURL,"Provide a link to a study page, click OK if none.") ;
 
-        return new Exam(year, month, day, dur, url, course) ;
+        return new Exam(year, month, day, url, course) ;
     
     }
 }

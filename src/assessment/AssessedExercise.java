@@ -12,7 +12,7 @@ public class AssessedExercise extends Assessment {
         return this.completed ;
     }
 
-    public void complete(){
-        this.completed = true ;
+    public void setComplete(boolean bool){
+        this.completed = bool ;
     }
 }

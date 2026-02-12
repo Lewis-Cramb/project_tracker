@@ -1,13 +1,20 @@
 package displays;
 
 import java.awt.* ;
+import java.awt.event.* ;
 import javax.swing.* ;
+import java.util.ArrayList ;
 
-public class PJ_SWING{
+import storing.inOut ;
+import assessment.Assessment ;
+
+public class PJ_SWING extends JFrame{
 
     public static void main(String[] args) {
+        //Storing stuff (implemented throughout)
+        ArrayList<Assessment> assessments = new ArrayList<Assessment>() ; //holds all types of assessment
         //Frame stuff
-        //add a label to a panel, add a panel to the frame
+
         JFrame frame = new JFrame() ;
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize() ; //using Toolkit to get screen size
         frame.setSize((int)screenSize.getWidth(), (int)screenSize.getHeight()) ;
@@ -28,12 +35,12 @@ public class PJ_SWING{
 
 
         JButton examAdd = new JButton("Add an exam") ;
-        examAdd.addActionListener(e -> new examBox(frame, boxPanel)) ;
+        examAdd.addActionListener(e -> new examBox(frame, boxPanel,assessments)) ;
         JPanel examButtonPanel = new JPanel() ;
         examButtonPanel.add(examAdd) ;
 
         JButton aeAdd = new JButton("Add an assessed exercise") ;
-        aeAdd.addActionListener(e -> new aeBox(frame, boxPanel)) ;
+        aeAdd.addActionListener(e -> new aeBox(frame, boxPanel,assessments)) ;
         JPanel aeButtonPanel = new JPanel() ;
         aeButtonPanel.add(aeAdd) ;
 
@@ -47,8 +54,18 @@ public class PJ_SWING{
 
         frame.add(topPanel, BorderLayout.PAGE_START) ;
         frame.setVisible(true) ;
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        frame.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent event) {
+                inOut.output(assessments) ;
+                System.exit(0) ;
+            }
+        });
 
 
+
+        //Storing stuff again
+        System.out.println(assessments) ;
     }
 }

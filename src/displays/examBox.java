@@ -1,14 +1,18 @@
 package displays;
 
 import assessment.Exam ;
+import assessment.Assessment ;
+
 import java.awt.* ;
 import java.time.LocalDate ;
 import javax.swing.* ;
+import java.util.ArrayList ;
 
 public class examBox {
 
-    public examBox(JFrame frame, JPanel boxPanel){
+    public examBox(JFrame frame, JPanel boxPanel, ArrayList<Assessment> assessList){
         Exam examDetails = examAdd.add() ;
+        assessList.add(examDetails) ;
         JPanel exmBox = new JPanel(new GridBagLayout()) ;
         GridBagConstraints gbc = new GridBagConstraints() ;
         

@@ -1,15 +1,26 @@
 package displays;
 
 import assessment.AssessedExercise ;
+import assessment.Assessment ;
 
 import java.awt.* ;
 import java.time.LocalDate ;
 import javax.swing.* ;
+import java.util.ArrayList ;
 
 public class aeBox {
 
-    public aeBox(JFrame frame, JPanel boxPanel){
+    public void setComplete(AssessedExercise ae){
+        if (ae.isCompleted()){
+            ae.setComplete(false) ;
+        } else {
+            ae.setComplete(true) ;
+        }
+    }
+
+    public aeBox(JFrame frame, JPanel boxPanel, ArrayList<Assessment> assessList){
         AssessedExercise aeDetails = aeAdd.add() ;
+        assessList.add(aeDetails) ;
         JPanel aeBox = new JPanel(new GridBagLayout()) ;
         GridBagConstraints gbc = new GridBagConstraints() ;
         
@@ -29,17 +40,27 @@ public class aeBox {
         aeBox.add(link, gbc) ;
 
         aeBox.setBorder(BorderFactory.createRaisedBevelBorder()) ;
+        
+        JCheckBox completed = new JCheckBox() ;
+        completed.addActionListener(e -> setComplete(aeDetails));
+        gbc.gridx = 1 ;
+        gbc.gridy = 0 ;
+        gbc.gridheight = 1 ;
+        gbc.anchor = GridBagConstraints.CENTER ;
+        aeBox.add(completed, gbc) ;
+
         JPanel circlePanel = new JPanel() {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g) ;
                 Graphics2D g2d = (Graphics2D) g ;
+
                 int examDay = aeDetails.getDate().getDayOfYear() ;
                 int curDay = LocalDate.now().getDayOfYear() ;
                 int remainingDays = examDay - curDay ;
 
                 g2d.setColor(Color.WHITE) ;
-                g2d.fillOval(5, 5, 50, 50) ;
+                g2d.fillOval(5, 10, 50, 50) ;
                 if (remainingDays < 8){
                     g2d.setColor(Color.RED) ;
                 } else if (remainingDays > 7 && remainingDays < 15){
@@ -68,7 +89,7 @@ public class aeBox {
         } ;
         circlePanel.setPreferredSize(new Dimension(60, 60)) ;
         gbc.gridx = 1 ;
-        gbc.gridy = 0 ;
+        gbc.gridy = 1 ;
         gbc.gridheight = 3 ;
         gbc.anchor = GridBagConstraints.CENTER ;
         aeBox.add(circlePanel, gbc) ;
