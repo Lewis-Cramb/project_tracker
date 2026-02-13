@@ -39,7 +39,9 @@ a66e803 - Eleventh commit, started to create the implementations of the box wire
 
 2399737 - Twelfth commit, copied examBox stuff over into aeBox so AEs can now be added to the program too - gui is also just lightly touched up as it is finished.
 
-[commit number] - Thirtheenth commit, edtied wireframe and gui slightly to fit better for aes, also changed the output so that the aes and exams are added to an arraylist that is sorted and can be added to a txt file.
+d346a7a - Thirtheenth commit, edtied wireframe and gui slightly to fit better for aes, also changed the output so that the aes and exams are added to an arraylist that is sorted and can be added to a txt file.
+
+[commit num] - Fourtheeth commit, added the ability to write to a file stored in Files/data.txt when the program exits. Also added a .gitignore so that any personal data (e.g filepaths, assessment data) can be blank for people to use if anyone forks this project.
 
 
 # Support credit/links

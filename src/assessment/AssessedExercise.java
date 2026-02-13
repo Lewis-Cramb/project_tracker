@@ -15,4 +15,12 @@ public class AssessedExercise extends Assessment {
     public void setComplete(boolean bool){
         this.completed = bool ;
     }
+
+    public String toString(){
+        return this.__str__() ;
+    }
+
+    public String __str__(){
+        return this.getName()+","+this.getCourse()+","+this.getDate()+","+this.getLink() ;
+    }
 }

@@ -62,10 +62,5 @@ public class PJ_SWING extends JFrame{
                 System.exit(0) ;
             }
         });
-
-
-
-        //Storing stuff again
-        System.out.println(assessments) ;
     }
 }

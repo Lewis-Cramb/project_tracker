@@ -8,6 +8,6 @@ public class inOut {
         //first, sort assessments by date
         ArrayList<Assessment> assessList = sort.InsertionSort(assessments) ;
         //next, write to the txt file
-        System.out.println(assessList) ;
+        wf.writefile(assessments) ;
     }
 }
