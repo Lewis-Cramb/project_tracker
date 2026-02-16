@@ -12,7 +12,7 @@ public class wf {
     //plan is to write to ../../Files/data.txt from an array that needs to be sorted
     public static void writefile(ArrayList<Assessment> assessList){
         File file = filepath.getFilename() ;
-            try (BufferedWriter bw = new BufferedWriter(new FileWriter(file, true))) {
+            try (BufferedWriter bw = new BufferedWriter(new FileWriter(file))) {
                 for (Assessment assess:assessList){
                     bw.write(assess.toString()) ; 
                     bw.newLine() ;

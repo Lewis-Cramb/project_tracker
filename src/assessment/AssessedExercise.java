@@ -16,6 +16,7 @@ public class AssessedExercise extends Assessment {
         this.completed = bool ;
     }
 
+    @Override
     public String toString(){
         return this.__str__() ;
     }

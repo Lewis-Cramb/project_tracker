@@ -22,6 +22,10 @@ public abstract class Assessment {
         return this.date ;
     }
 
+    public String getDateString(){
+        return this.date.getDayOfMonth()+"-"+this.date.getMonth()+"-"+this.date.getYear() ;
+    }
+
     public String getLink(){
         return this.link ;
     }

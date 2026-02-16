@@ -13,6 +13,14 @@ public class examBox {
     public examBox(JFrame frame, JPanel boxPanel, ArrayList<Assessment> assessList){
         Exam examDetails = examAdd.add() ;
         assessList.add(examDetails) ;
+        boxCreate(examDetails, frame, boxPanel) ;
+    }
+
+    public examBox(JFrame frame, JPanel boxPanel, Assessment assessment){
+        boxCreate(assessment, frame, boxPanel) ;
+    }
+
+    public void boxCreate(Assessment examDetails, JFrame frame, JPanel boxPanel){
         JPanel exmBox = new JPanel(new GridBagLayout()) ;
         GridBagConstraints gbc = new GridBagConstraints() ;
         

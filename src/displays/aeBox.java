@@ -2,6 +2,7 @@ package displays;
 
 import assessment.AssessedExercise ;
 import assessment.Assessment ;
+import assessment.Exam;
 
 import java.awt.* ;
 import java.time.LocalDate ;
@@ -10,7 +11,7 @@ import java.util.ArrayList ;
 
 public class aeBox {
 
-    public void setComplete(AssessedExercise ae){
+    private void setComplete(AssessedExercise ae){
         if (ae.isCompleted()){
             ae.setComplete(false) ;
         } else {
@@ -21,6 +22,15 @@ public class aeBox {
     public aeBox(JFrame frame, JPanel boxPanel, ArrayList<Assessment> assessList){
         AssessedExercise aeDetails = aeAdd.add() ;
         assessList.add(aeDetails) ;
+        boxCreate(aeDetails, frame, boxPanel) ;
+    }
+
+    public aeBox(JFrame frame, JPanel boxPanel, AssessedExercise assessment){
+        boxCreate(assessment, frame, boxPanel) ;
+    }
+
+
+    private void boxCreate(AssessedExercise aeDetails, JFrame frame, JPanel boxPanel){
         JPanel aeBox = new JPanel(new GridBagLayout()) ;
         GridBagConstraints gbc = new GridBagConstraints() ;
         

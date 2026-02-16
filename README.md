@@ -11,7 +11,7 @@ This will be a java program to track my AE due dates, exam dates and anything el
 - Between commit 4 and 5 I decided to work on the basic system first before moving on to the GUI using swing (or other, when time comes will pick)
 - Commit number 10 was the first use of AI to code something, I was lost with JFrame and it solved it for me, will be looking at the docs more closely and learning JFrame better.
 - Between commit 12 and 13, researching how to do the memory storage and need to note down ideas so that they make sense and I remember them. An idea is to use buffered file reader, adding the created exam or ae to a list that is sorted, written to a file and then added to the page somehow?
-
+- Between commit 14 and 15 I decided the approach for the last few commits, adding here mainly so I remember lol. Going to implement the readfile in commit 15, 16 for inputting the data into the system at launch and possibly partly through (refactor aeBox and examBox to be able to run the box creation without aeAdd and examAdd respectively), 17 for limiting storing by date and ae.isCompleted() (could a method to exam for dates maybe), 18 to just tidy up and hopefully I will have a fully functioning program by commit 18!
 
 # Commit history
 
@@ -41,7 +41,9 @@ a66e803 - Eleventh commit, started to create the implementations of the box wire
 
 d346a7a - Thirtheenth commit, edtied wireframe and gui slightly to fit better for aes, also changed the output so that the aes and exams are added to an arraylist that is sorted and can be added to a txt file.
 
-[commit num] - Fourtheeth commit, added the ability to write to a file stored in Files/data.txt when the program exits. Also added a .gitignore so that any personal data (e.g filepaths, assessment data) can be blank for people to use if anyone forks this project.
+fa1d37f - Fourtheeth commit, added the ability to write to a file stored in Files/data.txt when the program exits. Also added a .gitignore so that any personal data (e.g filepaths, assessment data) can be blank for people to use if anyone forks this project.
+
+[commit num] - Fifthteenth commit, added the readfile and the project can now take the data and input it at launch (noted supposed to be commit 16 but I jumped ahead as I was powering through). The project is almost complete, it just needs to add some validatation so that expired or completed assignments are not shown. I needed to refactor a lot, including the boxes as well as all of the basic assessment files. This refactoring or addition will be seen in the commit history.
 
 
 # Support credit/links
@@ -50,4 +52,3 @@ d346a7a - Thirtheenth commit, edtied wireframe and gui slightly to fit better fo
 
 Scanner - https://www.w3schools.com/java/java_user_input.asp , uni slides
 Swing - https://www.geeksforgeeks.org/java/introduction-to-java-swing/ , stack overflow, uni slides
-ObjectOutputStream - https://www.programiz.com/java-programming/objectoutputstream

@@ -10,4 +10,8 @@ public class inOut {
         //next, write to the txt file
         wf.writefile(assessments) ;
     }
+
+    public static ArrayList<Assessment> input(){
+        return rf.readfile() ;
+    }
 }

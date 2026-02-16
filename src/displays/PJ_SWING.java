@@ -6,13 +6,18 @@ import javax.swing.* ;
 import java.util.ArrayList ;
 
 import storing.inOut ;
-import assessment.Assessment ;
+import assessment.* ;
 
 public class PJ_SWING extends JFrame{
 
     public static void main(String[] args) {
         //Storing stuff (implemented throughout)
         ArrayList<Assessment> assessments = new ArrayList<Assessment>() ; //holds all types of assessment
+        assessments = inOut.input() ;
+        gui(assessments) ;
+    }
+
+    public static void gui(ArrayList<Assessment> assessments){
         //Frame stuff
 
         JFrame frame = new JFrame() ;
@@ -51,6 +56,17 @@ public class PJ_SWING extends JFrame{
         JPanel topPanel = new JPanel(new BorderLayout()) ;
         topPanel.add(titlePanel, BorderLayout.PAGE_START) ;
         topPanel.add(buttonRow, BorderLayout.CENTER) ;
+
+        //this *should* run at the start, when things are created
+        for (Assessment assess:assessments){
+            if ((assess.getClass()).equals((new Exam(0000,1,1,"","")).getClass())){
+                new examBox(frame, boxPanel,assess) ;
+            } else {
+                String[] dateSplit = (assess.getDateString()).split("-") ;
+                AssessedExercise temp = new AssessedExercise(assess.getName(),Integer.parseInt(dateSplit[0]), Integer.parseInt(dateSplit[1]), Integer.parseInt(dateSplit[2]), assess.getLink(), assess.getCourse()) ;
+                new aeBox(frame,boxPanel,temp) ;
+            }
+        }
 
         frame.add(topPanel, BorderLayout.PAGE_START) ;
         frame.setVisible(true) ;

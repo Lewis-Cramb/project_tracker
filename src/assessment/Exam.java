@@ -6,6 +6,7 @@ public class Exam extends Assessment {
         super("Exam", year, month, date, url, course) ;
     }
 
+    @Override
     public String toString(){
         return this.__str__() ;
     }
