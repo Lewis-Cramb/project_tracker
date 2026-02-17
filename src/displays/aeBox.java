@@ -2,7 +2,6 @@ package displays;
 
 import assessment.AssessedExercise ;
 import assessment.Assessment ;
-import assessment.Exam;
 
 import java.awt.* ;
 import java.time.LocalDate ;
@@ -21,12 +20,14 @@ public class aeBox {
 
     public aeBox(JFrame frame, JPanel boxPanel, ArrayList<Assessment> assessList){
         AssessedExercise aeDetails = aeAdd.add() ;
-        assessList.add(aeDetails) ;
         boxCreate(aeDetails, frame, boxPanel) ;
+        assessList.add(aeDetails) ;
     }
 
     public aeBox(JFrame frame, JPanel boxPanel, AssessedExercise assessment){
-        boxCreate(assessment, frame, boxPanel) ;
+        if (!assessment.isCompleted()){
+            boxCreate(assessment, frame, boxPanel) ;
+        }
     }
 
 

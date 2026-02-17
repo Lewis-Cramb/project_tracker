@@ -43,7 +43,9 @@ d346a7a - Thirtheenth commit, edtied wireframe and gui slightly to fit better fo
 
 fa1d37f - Fourtheeth commit, added the ability to write to a file stored in Files/data.txt when the program exits. Also added a .gitignore so that any personal data (e.g filepaths, assessment data) can be blank for people to use if anyone forks this project.
 
-[commit num] - Fifthteenth commit, added the readfile and the project can now take the data and input it at launch (noted supposed to be commit 16 but I jumped ahead as I was powering through). The project is almost complete, it just needs to add some validatation so that expired or completed assignments are not shown. I needed to refactor a lot, including the boxes as well as all of the basic assessment files. This refactoring or addition will be seen in the commit history.
+b69dd93 - Fifthteenth commit, added the readfile and the project can now take the data and input it at launch (noted supposed to be commit 16 but I jumped ahead as I was powering through). The project is almost complete, it just needs to add some validatation so that expired or completed assignments are not shown. I needed to refactor a lot, including the boxes as well as all of the basic assessment files. This refactoring or addition will be seen in the commit history.
+
+[commit num] - Sixteeth commit, was testing around again and the program stopped working? Changed the code slightly to fix this error. Also added in validation for years and anything completed or overdue.
 
 
 # Support credit/links

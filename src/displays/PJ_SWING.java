@@ -62,8 +62,7 @@ public class PJ_SWING extends JFrame{
             if ((assess.getClass()).equals((new Exam(0000,1,1,"","")).getClass())){
                 new examBox(frame, boxPanel,assess) ;
             } else {
-                String[] dateSplit = (assess.getDateString()).split("-") ;
-                AssessedExercise temp = new AssessedExercise(assess.getName(),Integer.parseInt(dateSplit[0]), Integer.parseInt(dateSplit[1]), Integer.parseInt(dateSplit[2]), assess.getLink(), assess.getCourse()) ;
+                AssessedExercise temp = (AssessedExercise) assess ;
                 new aeBox(frame,boxPanel,temp) ;
             }
         }

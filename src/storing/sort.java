@@ -5,7 +5,7 @@ import java.time.LocalDate ;
 import java.util.ArrayList ;
 
 public class sort {
-    public static ArrayList<Assessment> InsertionSort(ArrayList<Assessment> A){ 
+    public static void InsertionSort(ArrayList<Assessment> A){ 
         int n = A.size() ; 
         for (int j=1;j<n;j++){
             Assessment keyClass = A.get(j) ;
@@ -17,6 +17,5 @@ public class sort {
             }
             A.set(i+1,keyClass) ;
         }
-        return A ; 
     }
 }

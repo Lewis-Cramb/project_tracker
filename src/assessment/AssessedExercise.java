@@ -22,6 +22,6 @@ public class AssessedExercise extends Assessment {
     }
 
     public String __str__(){
-        return this.getName()+","+this.getCourse()+","+this.getDate()+","+this.getLink() ;
+        return this.getName()+","+this.getCourse()+","+this.getDate()+","+this.getLink()+","+this.isCompleted() ;
     }
 }

@@ -25,7 +25,11 @@ public class rf {
                 if (dataSplit[0].equals("Exam")){
                     fileOut.add(new Exam(year, month, day, dataSplit[3],dataSplit[1])) ;
                 } else {
-                    fileOut.add(new AssessedExercise(dataSplit[0], year, month, day, dataSplit[2], dataSplit[3])) ;
+                    AssessedExercise ae = new AssessedExercise(dataSplit[0], year, month, day, dataSplit[3], dataSplit[1]) ;
+                    if (!Boolean.parseBoolean(dataSplit[4])){ //if completed == false
+                        ae.setComplete(false) ;
+                        fileOut.add(ae) ;
+                    }
                 }
             }
             return fileOut ; //added as vs-code giving me grief for the finally statement
